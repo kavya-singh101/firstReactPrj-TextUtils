@@ -1,0 +1,4 @@
+"homepage": "https://github.com/kavya-singh101/TextUtils.git",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",

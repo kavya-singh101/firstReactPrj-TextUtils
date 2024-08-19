@@ -6,8 +6,7 @@ import TextForm from './components/TextForm.jsx';
 import Alert from './components/Alert.jsx';
 
 import {
-  BrowserRouter as Router, Routes as Switch, Route,
-  Link
+  BrowserRouter as Router, Routes as Switch, Route
 } from "react-router-dom";
 
 function App() {
@@ -80,10 +79,12 @@ function App() {
         <Alert alert={alert} />
 
         <div className="container my-3">
+          {/* <TextForm showAlert={showAlert} heading="Enter the text" mode={mode} /> */}
           <Switch>
-            <Route exact path="/about" element={<About />} />
             <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text" mode={mode} />} />
+            <Route exact path="/about" element={<About mode={mode}/>} />
           </Switch>
+          {/* <About /> */}
         </div>
       </Router>
 

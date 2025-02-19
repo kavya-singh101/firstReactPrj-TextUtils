@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+
+  # Frontend service (Vite + NGINX)
+  frontend:
+    build:
+      context: . # Path to your frontend code (adjust as needed)
+    image: textutil:latest
+    networks:
+      - mern_network
+    ports:
+      - "80:80" # Expose port 80 for the NGINX server
+
+networks:
+  mern_network:
+    driver: bridge
+
+

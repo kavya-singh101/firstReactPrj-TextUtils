@@ -4,9 +4,9 @@ services:
 
   # Frontend service (Vite + NGINX)
   frontend:
-    build:
-      context: . # Path to your frontend code (adjust as needed)
-    image: textutil:latest
+    # build:
+    #   context: . # Path to your frontend code (adjust as needed)
+    image: kavyasingh101/textutil:latest
     networks:
       - mern_network
     ports:
